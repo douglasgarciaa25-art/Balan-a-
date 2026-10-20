@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "scales": [
+    {
+      "id": "ret4",
+      "name": "Balança RET 4",
+      "tag": "MC4530-BL03C (BL01)",
+      "area": "MOAGEM",
+      "model": "MAGCOM M3000",
+      "range": "0–200 t/h"
+    }
+  ],
+  "records": [
+    {
+      "id": "ret4-planilha-0",
+      "scale": "ret4",
+      "date": "2026-05-27",
+      "om": "",
+      "executor": "Urias Nascimento",
+      "technician": "César Augusto",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '27.05.26' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 0,
+          "measured": 40,
+          "reference": 40
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-1",
+      "scale": "ret4",
+      "date": "2026-06-04",
+      "om": "40488482",
+      "executor": "Urias Nascimento",
+      "technician": "César Augusto",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '04.06.26' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 0,
+          "measured": 17948,
+          "reference": 17975
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-2",
+      "scale": "ret4",
+      "date": "2026-06-30",
+      "om": "40496087",
+      "executor": "Urias Nascimento",
+      "technician": "César Augusto",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '30.06.26' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 0,
+          "measured": 17985,
+          "reference": 17975
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-3",
+      "scale": "ret4",
+      "date": "2026-07-10",
+      "om": "",
+      "executor": "Urias Nascimento",
+      "technician": "César Augusto",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "01 - Aferição/calibração realizada por peso conhecido.\n\n02 - Foram utilizados dois caminhões da CREC, pesados na balança rodoviária da portaria.  ",
+      "source": "Planilha RET4 · aba '10.07.26' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 0,
+          "measured": 25583,
+          "reference": 26040
+        },
+        {
+          "stage": 1,
+          "measured": 25152,
+          "reference": 25590
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-4",
+      "scale": "ret4",
+      "date": "2026-07-16",
+      "om": "",
+      "executor": "Urias Nascimento",
+      "technician": "Pedro Sales",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '16.07.26 ' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 0,
+          "measured": 25583,
+          "reference": 26040
+        },
+        {
+          "stage": 2,
+          "measured": 17974,
+          "reference": 17976
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-5",
+      "scale": "ret4",
+      "date": "2026-07-16",
+      "om": "",
+      "executor": "Urias Nascimento",
+      "technician": "Pedro Sales",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '16.07.26' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 0,
+          "measured": 25583,
+          "reference": 26040
+        },
+        {
+          "stage": 2,
+          "measured": 17974,
+          "reference": 17976
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-6",
+      "scale": "ret4",
+      "date": "2026-08-21",
+      "om": "",
+      "executor": "Urias Nascimento",
+      "technician": "Pedro Sales",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '21.08.26  ' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 2,
+          "measured": 17970,
+          "reference": 17976
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-7",
+      "scale": "ret4",
+      "date": "2026-09-04",
+      "om": "",
+      "executor": "Urias Nascimento",
+      "technician": "Pedro Sales",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '04.09.26 ' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 2,
+          "measured": 17978,
+          "reference": 17976
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-8",
+      "scale": "ret4",
+      "date": "2026-09-28",
+      "om": "",
+      "executor": "Urias Nascimento",
+      "technician": "Pedro Sales",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '28.09.26 ' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 2,
+          "measured": 17967,
+          "reference": 17976
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-9",
+      "scale": "ret4",
+      "date": "2026-10-05",
+      "om": "",
+      "executor": "Roger Mateus",
+      "technician": "Pedro Sales",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '05.10.26' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 2,
+          "measured": 17982,
+          "reference": 17976
+        }
+      ]
+    },
+    {
+      "id": "ret4-planilha-10",
+      "scale": "ret4",
+      "date": "2026-10-11",
+      "om": "",
+      "executor": "Douglas Garcia",
+      "technician": "Pedro Sales",
+      "limit": 2,
+      "certificate": "",
+      "validity": "",
+      "next": "",
+      "notes": "",
+      "source": "Planilha RET4 · aba '11.10.26' · limite ±2% confirmado pelo usuário",
+      "readings": [
+        {
+          "stage": 2,
+          "measured": 17984,
+          "reference": 17976
+        }
+      ]
+    }
+  ]
+}
