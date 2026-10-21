@@ -1,53 +1,9 @@
-BALANÇA — ACOMPANHAMENTO v1.2
-
-1. Extraia o ZIP. Todos os arquivos estão na raiz.
-2. Abra index.html para usar localmente ou envie index.html, app.js, photos.js, pdf-export.js, pdf-lib.min.js, pdf-lib-LICENSE.txt e style.css ao repositório destinado ao aplicativo. Não há dependências nem compilação.
-3. Para hospedar, use hospedagem estática com index.html na raiz, inclusive GitHub Pages. O endereço depende do repositório e da configuração de publicação; este pacote não foi publicado.
-4. No aplicativo, vá em Dados e backup > Importar histórico / backup e escolha historico-ret4.json. O arquivo contém dados reais da planilha. Não é necessário colocá-lo no repositório público: importe-o diretamente do seu aparelho.
-5. Registre novas calibrações, edite registros, filtre o período e exporte CSV ou use Imprimir / PDF. Para PDF, escolha Salvar como PDF na impressão do navegador.
-6. Baixe backups JSON regularmente. Os dados ficam no navegador e não são sincronizados entre aparelhos. GitHub hospeda o código; não armazena os novos registros do aplicativo. Limpar o navegador pode apagá-los.
-
-CRITÉRIO
-Erro (%) = (peso medido − peso padrão) / peso padrão × 100.
-Negativo: leitura abaixo do padrão. Positivo: acima do padrão.
-Aceitação padrão confirmada pelo usuário: de −2% até +2%, inclusive.
-Desvio máximo = maior valor absoluto entre as leituras preenchidas, incluindo situação inicial. Uma leitura fora do limite torna o conjunto não conforme; isso não é uma conclusão independente sobre a condição final após ajuste.
-Peso padrão zero e pares incompletos não são aceitos. Leituras vazias não são convertidas em erro zero.
-
-HISTÓRICO DE ORIGEM
-11 abas / 14 leituras numéricas da planilha Balança RET4 MOAGEM (1)(1).xlsx.
-Duas abas de 16/07 foram preservadas como registros separados, com a aba indicada na origem. Confira se representam duplicidade antes de excluir qualquer registro.
-O critério do aplicativo usa o valor absoluto: a fórmula original MAX de erros com sinal podia ignorar desvios negativos. O coeficiente 0,02 da fórmula original equivale a 2%, conforme confirmação do usuário.
-
-LIMITES DA VERSÃO
-Acompanhamento manual, sem comunicação Ethernet/Modbus com o instrumento, sem login e sem sincronização em nuvem. Não altera parâmetros da balança nem calcula/aplica constante de escala.
-Validação: sintaxe JavaScript, dados importados, casos positivos/negativos e limites. Interface não testada em navegador nesta sessão.
-
-
-FOTOS — v1.2
-Categorias: constante de escala, calibração de zero, calibração de selo e calibração de span.
-Até 4 fotos em cada categoria. Use Tirar foto ou Escolher fotos e depois Salvar calibração.
-Fotos são otimizadas em JPEG, com lado maior de até 1600 pixels. Confira a legibilidade dos números antes de salvar. Mantenha os originais se precisar da resolução completa.
-Toque na miniatura para ampliar ou baixar. Em Editar, é possível acrescentar/remover imagens. As fotos também aparecem na impressão/PDF e no backup JSON; CSV exporta apenas os dados numéricos/textuais.
-O armazenamento passa a usar IndexedDB para suportar fotos. Registros da versão anterior no mesmo endereço/navegador continuam disponíveis. Não limpe os dados do navegador; faça backup antes de atualizar ou trocar de endereço.
-O salvamento avisa em caso de falha/espaço insuficiente e preserva a versão anterior. Dados não sincronizam entre aparelhos.
-Verificações: sintaxe JavaScript, quatro categorias, compatibilidade dos registros antigos, serialização do backup e validação das imagens. Captura pela câmera, persistência IndexedDB e impressão não foram verificadas em navegador nesta sessão.
-
-
-PDF COMPLETO — v1.2
-PDF de tudo: todas as balanças e todos os registros salvos, mesmo que haja filtros na tela.
-PDF do período: somente a balança e o período selecionados.
-Baixar PDF completo dentro de um registro: somente aquela calibração.
-Inclui identificação, TAG, área, modelo, faixa, data, OM, executante, técnico, limite, leituras, erros com sinal, resultado, certificado, validade, próxima calibração, observações, origem, gráfico e todas as fotos anexadas.
-Cada foto ocupa uma página própria com legenda. O PDF baixa diretamente, sem serviço externo, e inclui apenas dados já salvos. Salve suas alterações antes de exportar.
-Biblioteca pdf-lib incluída no pacote com licença MIT. Não precisa de internet para gerar o PDF após os arquivos do aplicativo estarem carregados.
-Verificação: PDF de teste com 11 registros e 4 fotos gerado e inspecionado visualmente; sinais e imagens verificados por extração. Download e câmera no celular ainda não testados nesta sessão.
-
-
-INSTALAÇÃO NO CELULAR — v1.3
-Envie os arquivos do aplicativo para o mesmo repositório/endereço HTTPS, preservando os caminhos. Os arquivos continuam todos na raiz. Não precisa publicar historico-ret4.json; ele pode ser importado localmente.
-Depois de publicar, abra o link no Chrome do Android e toque em Instalar aplicativo. Se o convite não aparecer, use o menu do navegador e procure Instalar aplicativo ou Adicionar à tela inicial. No iPhone, Safari > Compartilhar > Adicionar à Tela de Início.
-A instalação requer o endereço publicado HTTPS. O ZIP sozinho não instala e não é um APK. Este pacote ainda não foi publicado, pois falta o repositório/endereço de destino.
-Após aparecer Pronto para usar offline, as funções locais e a geração de PDF ficam disponíveis sem internet. O primeiro acesso e as atualizações precisam de conexão. Dados continuam locais no aparelho; não há sincronização em nuvem.
-Atualizações são aplicadas após salvar e fechar todas as janelas do aplicativo. Ao alterar o código em futuras versões, atualize o nome do cache em sw.js.
-Verificações: sintaxe, manifesto, dimensões dos ícones e presença de todos os recursos offline. Instalação real e modo offline ainda precisam ser conferidos no celular usando o endereço publicado.
+BALANÇA — VERSÃO 2.4
+Resultado final: escolha explicitamente a leitura Após ajuste que confirma o resultado. Sem escolha, todas as leituras Após ajuste continuam avaliadas, preservando os registros antigos.
+Gráficos: pontos separados por sequência cronológica, no aplicativo e no PDF.
+Velocidade: tempos registrados são guardados no aparelho; use Anexar velocidade para incluir na calibração aberta e salvar. O PDF inclui comprimento, tempos, média e velocidade. Cronômetro em andamento não é recuperado após fechar.
+Backup inclui rascunhos e fotos. Rascunhos de edição importados são recuperados como nova calibração para evitar sobrescritas.
+PDF: confira a lista de datas, TAGs e OMs antes de gerar.
+M3000: cálculo proporcional genérico, fórmula específica ainda não validada. Não escolha relação por suposição.
+Nuvem não configurada. GitHub não foi atualizado pela integração; produção publicada diretamente na Vercel.
+Testes: lógica e fluxos em DOM emulado, PDF gerado e página alterada renderizada. Câmera, instalação e uso offline precisam de conferência no aparelho.
