@@ -1,5 +1,5 @@
 'use strict';
-const CACHE="balanca-pwa-v2-71240c0e2132560e",FILES=["./","./index.html","./style.css","./core.js","./storage.js","./photos.js","./app.js","./pdf-lib.min.js","./pdf-export.js","./supabase.js","./cloud.js","./install.js","./inventory.js","./logo-cmoc.png","./speed.js","./calculator.js","./layout.js","./manifest.webmanifest","./icon-192.png","./icon-512.png","./icon-maskable.png"];
+const CACHE="balanca-pwa-v2-0a08a3385a2be877",FILES=["./","./index.html","./style.css","./core.js","./storage.js","./photos.js","./app.js","./pdf-lib.min.js","./pdf-export.js","./supabase.js","./cloud.js","./install.js","./inventory.js","./logo-cmoc.png","./speed.js","./calculator.js","./layout.js","./manifest.webmanifest","./icon-192.png","./icon-512.png","./icon-maskable.png"];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('message',e=>{if(e.data?.type==='ACTIVATE_UPDATE')self.skipWaiting();});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('balanca-pwa-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

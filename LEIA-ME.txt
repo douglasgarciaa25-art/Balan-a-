@@ -1,9 +1,29 @@
-BALANÇA — VERSÃO 2.4
-Resultado final: escolha explicitamente a leitura Após ajuste que confirma o resultado. Sem escolha, todas as leituras Após ajuste continuam avaliadas, preservando os registros antigos.
-Gráficos: pontos separados por sequência cronológica, no aplicativo e no PDF.
-Velocidade: tempos registrados são guardados no aparelho; use Anexar velocidade para incluir na calibração aberta e salvar. O PDF inclui comprimento, tempos, média e velocidade. Cronômetro em andamento não é recuperado após fechar.
-Backup inclui rascunhos e fotos. Rascunhos de edição importados são recuperados como nova calibração para evitar sobrescritas.
-PDF: confira a lista de datas, TAGs e OMs antes de gerar.
-M3000: cálculo proporcional genérico, fórmula específica ainda não validada. Não escolha relação por suposição.
-Nuvem não configurada. GitHub não foi atualizado pela integração; produção publicada diretamente na Vercel.
-Testes: lógica e fluxos em DOM emulado, PDF gerado e página alterada renderizada. Câmera, instalação e uso offline precisam de conferência no aparelho.
+BALANÇA — VERSÃO 2.5 (continuação da v2.4)
+
+ARQUIVOS E PUBLICAÇÃO
+- Substitua os arquivos antigos pelos novos, todos na RAIZ do repositório "Balan-a-" ligado ao projeto "balanca-acompanhamento" da Vercel. Não crie subpastas.
+- Não apague o histórico do navegador e não limpe IndexedDB: as calibrações antigas ficam salvas no aparelho.
+- Faça um backup JSON antes de atualizar ou importar registros de outra pessoa.
+- Quando a publicação terminar, atualize a página e confira a identificação "v2.5".
+
+MELHORIAS V2.5
+- Modelo do integrador, capacidade em t/h, célula de carga em kg e peso padrão em kg separados no cadastro e no levantamento PDF.
+- Cadastro pré-carregado com 10 balanças do levantamento, sem substituir alterações existentes. C215 BA01/BA02 sem padrão físico: status "Indisponível. Aquisição solicitada".
+- Peso padrão sugerido automaticamente na situação inicial, e ao digitar uma medição de outra etapa. Todos os campos continuam editáveis.
+- Trocar de balança não altera os pesos das calibrações já salvas.
+- Fotos, histórico, gráficos, resultado inicial/final, PDF individual/consolidado e backup com rascunhos preservados da v2.4.
+- "Equipe" na nuvem: login, convite, dados compartilhados, sincronização e prevenção contra sobrescrever simultaneamente atualizações.
+
+CONFIGURAR NUVEM DA EQUIPE (ainda NÃO ativa automaticamente)
+1. Providencie um projeto Supabase DEDICADO/APROVADO para balanças. Não utilize os projetos de outros aplicativos.
+2. Execute cloud-setup.sql no editor SQL do projeto. O esquema cria RLS por equipe e convites protegidos.
+3. Em Dados -> Configuração segura da nuvem, coloque somente a URL https://...supabase.co e a chave PÚBLICA sb_publishable_... . Nunca coloque chaves secretas em HTML, GitHub ou chat.
+4. Crie sua conta, confirme o e-mail se solicitado, e faça login.
+5. Clique em "Criar uma equipe", confira os registros locais e crie o espaço. No perfil proprietário, use "Mostrar convite" para copiar ID/código e compartilhá-los em canal privado.
+6. Colegas entram com conta própria pelo ID e código. Em "Conferir alterações da equipe", escolhem mesclar os registros existentes; depois habilitam sincronização automática.
+7. Revise, em outro aparelho autorizado, os dados e fotos. Sem configurar o projeto, somente o armazenamento local fica disponível. O plano gratuito tem limites e pode exigir um projeto adicional.
+
+VALIDAÇÃO NECESSÁRIA
+- Confirme a capacidade da célula de carga e o modelo no equipamento/placa; dados sem confirmação permanecem em branco.
+- Fórmula específica de atualização de constante Magcom M3000 NÃO validada. Calculadora genérica exige selecionar a relação confirmada em manual.
+- Testes JavaScript estáticos e lógica básica executados. Câmera, instalação PWA, login/SQL Supabase e concorrência real entre aparelhos aguardam ensaio de campo.
